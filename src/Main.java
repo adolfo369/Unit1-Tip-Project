@@ -13,9 +13,11 @@ class Main {
         //The user is required to input the tip percentage required, which is then stored as the "tipAmount" variable for future usage.
         System.out.print("Enter how much people there are: ");
         int people = scan.nextInt();
+        double peopleRounded = ((Math.floor(people*100))/100);
         //The user is required to input the total number of people present which is then stored as the "people" variable for future usage.
         double totalTipAmount = (tipAmount/100) * (billAmount);
         double totalTipRounded = ((Math.floor(totalTipAmount*100))/100);
+        System.out.println(totalTipRounded);
         //The tip percentage is divided by 100 in order to get it into a decimal value, which is then multiplied by the bill amount to see how much the tip desired will cost. This is then stored as a variable for further usage.
         System.out.println("- - - - - - - - - - - - - - - - - - - - - - - - ");
         System.out.println("Total Tip Amount: $" + totalTipRounded);
@@ -23,7 +25,7 @@ class Main {
         //The total cost of the tip is added to the total cost of the bill in order to get the entire and final cost for all of the members to a pay an equal portion of. This is then stored as a variable for future usage.
         System.out.println("- - - - - - - - - - - - - - - - - - - - - - - - ");
         System.out.println("Total Bill Cost: $" + totalBillCostRounded);
-        double tipPerPerson = ((totalTipRounded/(double)(people)));
+        double tipPerPerson = (Math.floor(totalTipRounded/people)*100)/100;
         System.out.println(tipPerPerson);
         //The cost of the tips is divided by the number of people that there are in order to see how much every person will have to pay, presuming they all pay an equal share. This is then stored as a variable for future usage.
         System.out.println("- - - - - - - - - - - - - - - - - - - - - - - - ");
