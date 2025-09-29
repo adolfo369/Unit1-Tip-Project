@@ -25,7 +25,6 @@ class main {
         double totalTipAmount = (tipAmount/100) * (billAmount);
         double totalTipRounded = ((Math.floor(totalTipAmount*100))/100);
         //This is the rounded down version into two decimal places, the math floor to get it to a whole number/integer and the *100 and the /100 to get the decimal places.
-        System.out.println(totalTipRounded);
         //The tip percentage is divided by 100 in order to get it into a decimal value, which is then multiplied by the bill amount to see how much the tip desired will cost. This is then stored as a variable for further usage.
         System.out.println("- - - - - - - - - - - - - - - - - - - - - - - - ");
         System.out.println("Total Tip Amount: $" + df.format(totalTipRounded));
